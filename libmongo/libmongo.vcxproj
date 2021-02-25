@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{ee3f164c-15ae-45f2-80ae-c46138c437cb}</ProjectGuid>
+    <RootNamespace>libmongo</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_WINDOWS;MONGOC_STATIC;BSON_STATIC;MONGOC_COMPILATION;KMS_MSG_STATIC;KMS_MESSAGE_ENABLE_CRYPTO;KMS_MESSAGE_ENABLE_CRYPTO_CNG;BSON_COMPILATION;JSONSL_PARSE_NAN;_CRT_SECURE_NO_WARNINGS;_GNU_SOURCE;_BSD_SOURCE;_DEFAULT_SOURCE;COMMON_PREFIX_=_mongoc_common;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)common;$(ProjectDir)kms-message;$(ProjectDir)mongoc;$(ProjectDir)tools;$(ProjectDir)zlib;$(ProjectDir)bson;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4703;4146</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="bson\bson-config.h" />
+    <ClInclude Include="bson\bson-version.h" />
+    <ClInclude Include="bson\bson\bcon.h" />
+    <ClInclude Include="bson\bson\bson-atomic.h" />
+    <ClInclude Include="bson\bson\bson-clock.h" />
+    <ClInclude Include="bson\bson\bson-compat.h" />
+    <ClInclude Include="bson\bson\bson-context-private.h" />
+    <ClInclude Include="bson\bson\bson-context.h" />
+    <ClInclude Include="bson\bson\bson-decimal128.h" />
+    <ClInclude Include="bson\bson\bson-endian.h" />
+    <ClInclude Include="bson\bson\bson-error.h" />
+    <ClInclude Include="bson\bson\bson-iso8601-private.h" />
+    <ClInclude Include="bson\bson\bson-iter.h" />
+    <ClInclude Include="bson\bson\bson-json.h" />
+    <ClInclude Include="bson\bson\bson-keys.h" />
+    <ClInclude Include="bson\bson\bson-macros.h" />
+    <ClInclude Include="bson\bson\bson-md5.h" />
+    <ClInclude Include="bson\bson\bson-memory.h" />
+    <ClInclude Include="bson\bson\bson-oid.h" />
+    <ClInclude Include="bson\bson\bson-prelude.h" />
+    <ClInclude Include="bson\bson\bson-private.h" />
+    <ClInclude Include="bson\bson\bson-reader.h" />
+    <ClInclude Include="bson\bson\bson-string.h" />
+    <ClInclude Include="bson\bson\bson-timegm-private.h" />
+    <ClInclude Include="bson\bson\bson-types.h" />
+    <ClInclude Include="bson\bson\bson-utf8.h" />
+    <ClInclude Include="bson\bson\bson-value.h" />
+    <ClInclude Include="bson\bson\bson-version-functions.h" />
+    <ClInclude Include="bson\bson\bson-version.h" />
+    <ClInclude Include="bson\bson\bson-writer.h" />
+    <ClInclude Include="bson\bson\bson.h" />
+    <ClInclude Include="bson\jsonsl\jsonsl.h" />
+    <ClInclude Include="common\common-b64-private.h" />
+    <ClInclude Include="common\common-md5-private.h" />
+    <ClInclude Include="common\common-prelude.h" />
+    <ClInclude Include="common\common-thread-private.h" />
+    <ClInclude Include="kms-message\hexlify.h" />
+    <ClInclude Include="kms-message\kms_crypto.h" />
+    <ClInclude Include="kms-message\kms_kv_list.h" />
+    <ClInclude Include="kms-message\kms_message\kms_b64.h" />
+    <ClInclude Include="kms-message\kms_message\kms_caller_identity_request.h" />
+    <ClInclude Include="kms-message\kms_message\kms_decrypt_request.h" />
+    <ClInclude Include="kms-message\kms_message\kms_encrypt_request.h" />
+    <ClInclude Include="kms-message\kms_message\kms_message.h" />
+    <ClInclude Include="kms-message\kms_message\kms_message_defines.h" />
+    <ClInclude Include="kms-message\kms_message\kms_request.h" />
+    <ClInclude Include="kms-message\kms_message\kms_request_opt.h" />
+    <ClInclude Include="kms-message\kms_message\kms_response.h" />
+    <ClInclude Include="kms-message\kms_message\kms_response_parser.h" />
+    <ClInclude Include="kms-message\kms_message_private.h" />
+    <ClInclude Include="kms-message\kms_port.h" />
+    <ClInclude Include="kms-message\kms_request_opt_private.h" />
+    <ClInclude Include="kms-message\kms_request_str.h" />
+    <ClInclude Include="kms-message\sort.h" />
+    <ClInclude Include="mongoc-config.h" />
+    <ClInclude Include="mongoc-version.h" />
+    <ClInclude Include="mongoc\mongoc-aggregate-private.h" />
+    <ClInclude Include="mongoc\mongoc-apm-private.h" />
+    <ClInclude Include="mongoc\mongoc-apm.h" />
+    <ClInclude Include="mongoc\mongoc-array-private.h" />
+    <ClInclude Include="mongoc\mongoc-async-cmd-private.h" />
+    <ClInclude Include="mongoc\mongoc-async-private.h" />
+    <ClInclude Include="mongoc\mongoc-buffer-private.h" />
+    <ClInclude Include="mongoc\mongoc-bulk-operation-private.h" />
+    <ClInclude Include="mongoc\mongoc-bulk-operation.h" />
+    <ClInclude Include="mongoc\mongoc-change-stream-private.h" />
+    <ClInclude Include="mongoc\mongoc-change-stream.h" />
+    <ClInclude Include="mongoc\mongoc-client-pool-private.h" />
+    <ClInclude Include="mongoc\mongoc-client-pool.h" />
+    <ClInclude Include="mongoc\mongoc-client-private.h" />
+    <ClInclude Include="mongoc\mongoc-client-session-private.h" />
+    <ClInclude Include="mongoc\mongoc-client-session.h" />
+    <ClInclude Include="mongoc\mongoc-client-side-encryption-private.h" />
+    <ClInclude Include="mongoc\mongoc-client-side-encryption.h" />
+    <ClInclude Include="mongoc\mongoc-client.h" />
+    <ClInclude Include="mongoc\mongoc-cluster-aws-private.h" />
+    <ClInclude Include="mongoc\mongoc-cluster-cyrus-private.h" />
+    <ClInclude Include="mongoc\mongoc-cluster-private.h" />
+    <ClInclude Include="mongoc\mongoc-cluster-sasl-private.h" />
+    <ClInclude Include="mongoc\mongoc-cluster-sspi-private.h" />
+    <ClInclude Include="mongoc\mongoc-cmd-private.h" />
+    <ClInclude Include="mongoc\mongoc-collection-private.h" />
+    <ClInclude Include="mongoc\mongoc-collection.h" />
+    <ClInclude Include="mongoc\mongoc-compression-private.h" />
+    <ClInclude Include="mongoc\mongoc-counters-private.h" />
+    <ClInclude Include="mongoc\mongoc-crypt-private.h" />
+    <ClInclude Include="mongoc\mongoc-crypto-cng-private.h" />
+    <ClInclude Include="mongoc\mongoc-crypto-common-crypto-private.h" />
+    <ClInclude Include="mongoc\mongoc-crypto-openssl-private.h" />
+    <ClInclude Include="mongoc\mongoc-crypto-private.h" />
+    <ClInclude Include="mongoc\mongoc-cursor-private.h" />
+    <ClInclude Include="mongoc\mongoc-cursor.h" />
+    <ClInclude Include="mongoc\mongoc-cyrus-private.h" />
+    <ClInclude Include="mongoc\mongoc-database-private.h" />
+    <ClInclude Include="mongoc\mongoc-database.h" />
+    <ClInclude Include="mongoc\mongoc-errno-private.h" />
+    <ClInclude Include="mongoc\mongoc-error-private.h" />
+    <ClInclude Include="mongoc\mongoc-error.h" />
+    <ClInclude Include="mongoc\mongoc-find-and-modify-private.h" />
+    <ClInclude Include="mongoc\mongoc-find-and-modify.h" />
+    <ClInclude Include="mongoc\mongoc-flags-private.h" />
+    <ClInclude Include="mongoc\mongoc-flags.h" />
+    <ClInclude Include="mongoc\mongoc-gridfs-bucket-file-private.h" />
+    <ClInclude Include="mongoc\mongoc-gridfs-bucket-private.h" />
+    <ClInclude Include="mongoc\mongoc-gridfs-bucket.h" />
+    <ClInclude Include="mongoc\mongoc-gridfs-file-list-private.h" />
+    <ClInclude Include="mongoc\mongoc-gridfs-file-list.h" />
+    <ClInclude Include="mongoc\mongoc-gridfs-file-page-private.h" />
+    <ClInclude Include="mongoc\mongoc-gridfs-file-page.h" />
+    <ClInclude Include="mongoc\mongoc-gridfs-file-private.h" />
+    <ClInclude Include="mongoc\mongoc-gridfs-file.h" />
+    <ClInclude Include="mongoc\mongoc-gridfs-private.h" />
+    <ClInclude Include="mongoc\mongoc-gridfs.h" />
+    <ClInclude Include="mongoc\mongoc-handshake-compiler-private.h" />
+    <ClInclude Include="mongoc\mongoc-handshake-os-private.h" />
+    <ClInclude Include="mongoc\mongoc-handshake-private.h" />
+    <ClInclude Include="mongoc\mongoc-handshake.h" />
+    <ClInclude Include="mongoc\mongoc-host-list-private.h" />
+    <ClInclude Include="mongoc\mongoc-host-list.h" />
+    <ClInclude Include="mongoc\mongoc-http-private.h" />
+    <ClInclude Include="mongoc\mongoc-index.h" />
+    <ClInclude Include="mongoc\mongoc-init.h" />
+    <ClInclude Include="mongoc\mongoc-interrupt-private.h" />
+    <ClInclude Include="mongoc\mongoc-iovec.h" />
+    <ClInclude Include="mongoc\mongoc-libressl-private.h" />
+    <ClInclude Include="mongoc\mongoc-linux-distro-scanner-private.h" />
+    <ClInclude Include="mongoc\mongoc-list-private.h" />
+    <ClInclude Include="mongoc\mongoc-log-private.h" />
+    <ClInclude Include="mongoc\mongoc-log.h" />
+    <ClInclude Include="mongoc\mongoc-macros.h" />
+    <ClInclude Include="mongoc\mongoc-matcher-op-private.h" />
+    <ClInclude Include="mongoc\mongoc-matcher-private.h" />
+    <ClInclude Include="mongoc\mongoc-matcher.h" />
+    <ClInclude Include="mongoc\mongoc-memcmp-private.h" />
+    <ClInclude Include="mongoc\mongoc-ocsp-cache-private.h" />
+    <ClInclude Include="mongoc\mongoc-opcode.h" />
+    <ClInclude Include="mongoc\mongoc-openssl-private.h" />
+    <ClInclude Include="mongoc\mongoc-opts-helpers-private.h" />
+    <ClInclude Include="mongoc\mongoc-opts-private.h" />
+    <ClInclude Include="mongoc\mongoc-prelude.h" />
+    <ClInclude Include="mongoc\mongoc-queue-private.h" />
+    <ClInclude Include="mongoc\mongoc-rand-private.h" />
+    <ClInclude Include="mongoc\mongoc-rand.h" />
+    <ClInclude Include="mongoc\mongoc-read-concern-private.h" />
+    <ClInclude Include="mongoc\mongoc-read-concern.h" />
+    <ClInclude Include="mongoc\mongoc-read-prefs-private.h" />
+    <ClInclude Include="mongoc\mongoc-read-prefs.h" />
+    <ClInclude Include="mongoc\mongoc-rpc-private.h" />
+    <ClInclude Include="mongoc\mongoc-sasl-private.h" />
+    <ClInclude Include="mongoc\mongoc-scram-private.h" />
+    <ClInclude Include="mongoc\mongoc-secure-channel-private.h" />
+    <ClInclude Include="mongoc\mongoc-secure-transport-private.h" />
+    <ClInclude Include="mongoc\mongoc-server-description-private.h" />
+    <ClInclude Include="mongoc\mongoc-server-description.h" />
+    <ClInclude Include="mongoc\mongoc-server-monitor-private.h" />
+    <ClInclude Include="mongoc\mongoc-server-stream-private.h" />
+    <ClInclude Include="mongoc\mongoc-set-private.h" />
+    <ClInclude Include="mongoc\mongoc-socket-private.h" />
+    <ClInclude Include="mongoc\mongoc-socket.h" />
+    <ClInclude Include="mongoc\mongoc-ssl-private.h" />
+    <ClInclude Include="mongoc\mongoc-ssl.h" />
+    <ClInclude Include="mongoc\mongoc-sspi-private.h" />
+    <ClInclude Include="mongoc\mongoc-stream-buffered.h" />
+    <ClInclude Include="mongoc\mongoc-stream-file.h" />
+    <ClInclude Include="mongoc\mongoc-stream-gridfs-download-private.h" />
+    <ClInclude Include="mongoc\mongoc-stream-gridfs-upload-private.h" />
+    <ClInclude Include="mongoc\mongoc-stream-gridfs.h" />
+    <ClInclude Include="mongoc\mongoc-stream-private.h" />
+    <ClInclude Include="mongoc\mongoc-stream-socket.h" />
+    <ClInclude Include="mongoc\mongoc-stream-tls-libressl-private.h" />
+    <ClInclude Include="mongoc\mongoc-stream-tls-libressl.h" />
+    <ClInclude Include="mongoc\mongoc-stream-tls-openssl-bio-private.h" />
+    <ClInclude Include="mongoc\mongoc-stream-tls-openssl-private.h" />
+    <ClInclude Include="mongoc\mongoc-stream-tls-openssl.h" />
+    <ClInclude Include="mongoc\mongoc-stream-tls-private.h" />
+    <ClInclude Include="mongoc\mongoc-stream-tls-secure-channel-private.h" />
+    <ClInclude Include="mongoc\mongoc-stream-tls-secure-channel.h" />
+    <ClInclude Include="mongoc\mongoc-stream-tls-secure-transport-private.h" />
+    <ClInclude Include="mongoc\mongoc-stream-tls-secure-transport.h" />
+    <ClInclude Include="mongoc\mongoc-stream-tls.h" />
+    <ClInclude Include="mongoc\mongoc-stream.h" />
+    <ClInclude Include="mongoc\mongoc-thread-private.h" />
+    <ClInclude Include="mongoc\mongoc-topology-background-monitoring-private.h" />
+    <ClInclude Include="mongoc\mongoc-topology-description-apm-private.h" />
+    <ClInclude Include="mongoc\mongoc-topology-description-private.h" />
+    <ClInclude Include="mongoc\mongoc-topology-description.h" />
+    <ClInclude Include="mongoc\mongoc-topology-private.h" />
+    <ClInclude Include="mongoc\mongoc-topology-scanner-private.h" />
+    <ClInclude Include="mongoc\mongoc-trace-private.h" />
+    <ClInclude Include="mongoc\mongoc-uri-private.h" />
+    <ClInclude Include="mongoc\mongoc-uri.h" />
+    <ClInclude Include="mongoc\mongoc-util-private.h" />
+    <ClInclude Include="mongoc\mongoc-version-functions.h" />
+    <ClInclude Include="mongoc\mongoc-version.h" />
+    <ClInclude Include="mongoc\mongoc-write-command-legacy-private.h" />
+    <ClInclude Include="mongoc\mongoc-write-command-private.h" />
+    <ClInclude Include="mongoc\mongoc-write-concern-private.h" />
+    <ClInclude Include="mongoc\mongoc-write-concern.h" />
+    <ClInclude Include="mongoc\mongoc.h" />
+    <ClInclude Include="mongoc\utlist.h" />
+    <ClInclude Include="zconf.h" />
+    <ClInclude Include="zlib\crc32.h" />
+    <ClInclude Include="zlib\deflate.h" />
+    <ClInclude Include="zlib\gzguts.h" />
+    <ClInclude Include="zlib\inffast.h" />
+    <ClInclude Include="zlib\inffixed.h" />
+    <ClInclude Include="zlib\inflate.h" />
+    <ClInclude Include="zlib\inftrees.h" />
+    <ClInclude Include="zlib\trees.h" />
+    <ClInclude Include="zlib\zconf.h" />
+    <ClInclude Include="zlib\zlib.h" />
+    <ClInclude Include="zlib\zutil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bson\bson\bcon.c" />
+    <ClCompile Include="bson\bson\bson-atomic.c" />
+    <ClCompile Include="bson\bson\bson-clock.c" />
+    <ClCompile Include="bson\bson\bson-context.c" />
+    <ClCompile Include="bson\bson\bson-decimal128.c" />
+    <ClCompile Include="bson\bson\bson-error.c" />
+    <ClCompile Include="bson\bson\bson-iso8601.c" />
+    <ClCompile Include="bson\bson\bson-iter.c" />
+    <ClCompile Include="bson\bson\bson-json.c" />
+    <ClCompile Include="bson\bson\bson-keys.c" />
+    <ClCompile Include="bson\bson\bson-md5.c" />
+    <ClCompile Include="bson\bson\bson-memory.c" />
+    <ClCompile Include="bson\bson\bson-oid.c" />
+    <ClCompile Include="bson\bson\bson-reader.c" />
+    <ClCompile Include="bson\bson\bson-string.c" />
+    <ClCompile Include="bson\bson\bson-timegm.c" />
+    <ClCompile Include="bson\bson\bson-utf8.c" />
+    <ClCompile Include="bson\bson\bson-value.c" />
+    <ClCompile Include="bson\bson\bson-version-functions.c" />
+    <ClCompile Include="bson\bson\bson-writer.c" />
+    <ClCompile Include="bson\bson\bson.c" />
+    <ClCompile Include="bson\jsonsl\jsonsl.c" />
+    <ClCompile Include="common\common-b64.c" />
+    <ClCompile Include="common\common-md5.c" />
+    <ClCompile Include="common\common-thread.c" />
+    <ClCompile Include="kms-message\hexlify.c" />
+    <ClCompile Include="kms-message\kms_b64.c" />
+    <ClCompile Include="kms-message\kms_caller_identity_request.c" />
+    <ClCompile Include="kms-message\kms_crypto_apple.c" />
+    <ClCompile Include="kms-message\kms_crypto_libcrypto.c" />
+    <ClCompile Include="kms-message\kms_crypto_none.c" />
+    <ClCompile Include="kms-message\kms_crypto_windows.c" />
+    <ClCompile Include="kms-message\kms_decrypt_request.c" />
+    <ClCompile Include="kms-message\kms_encrypt_request.c" />
+    <ClCompile Include="kms-message\kms_kv_list.c" />
+    <ClCompile Include="kms-message\kms_message.c" />
+    <ClCompile Include="kms-message\kms_port.c" />
+    <ClCompile Include="kms-message\kms_request.c" />
+    <ClCompile Include="kms-message\kms_request_opt.c" />
+    <ClCompile Include="kms-message\kms_request_str.c" />
+    <ClCompile Include="kms-message\kms_response.c" />
+    <ClCompile Include="kms-message\kms_response_parser.c" />
+    <ClCompile Include="kms-message\sort.c" />
+    <ClCompile Include="mongoc\mongoc-aggregate.c" />
+    <ClCompile Include="mongoc\mongoc-apm.c" />
+    <ClCompile Include="mongoc\mongoc-array.c" />
+    <ClCompile Include="mongoc\mongoc-async-cmd.c" />
+    <ClCompile Include="mongoc\mongoc-async.c" />
+    <ClCompile Include="mongoc\mongoc-buffer.c" />
+    <ClCompile Include="mongoc\mongoc-bulk-operation.c" />
+    <ClCompile Include="mongoc\mongoc-change-stream.c" />
+    <ClCompile Include="mongoc\mongoc-client-pool.c" />
+    <ClCompile Include="mongoc\mongoc-client-session.c" />
+    <ClCompile Include="mongoc\mongoc-client-side-encryption.c" />
+    <ClCompile Include="mongoc\mongoc-client.c" />
+    <ClCompile Include="mongoc\mongoc-cluster-aws.c" />
+    <ClCompile Include="mongoc\mongoc-cluster-cyrus.c" />
+    <ClCompile Include="mongoc\mongoc-cluster-sasl.c" />
+    <ClCompile Include="mongoc\mongoc-cluster-sspi.c" />
+    <ClCompile Include="mongoc\mongoc-cluster.c" />
+    <ClCompile Include="mongoc\mongoc-cmd.c" />
+    <ClCompile Include="mongoc\mongoc-collection.c" />
+    <ClCompile Include="mongoc\mongoc-compression.c" />
+    <ClCompile Include="mongoc\mongoc-counters.c" />
+    <ClCompile Include="mongoc\mongoc-crypt.c" />
+    <ClCompile Include="mongoc\mongoc-crypto-cng.c" />
+    <ClCompile Include="mongoc\mongoc-crypto-common-crypto.c" />
+    <ClCompile Include="mongoc\mongoc-crypto-openssl.c" />
+    <ClCompile Include="mongoc\mongoc-crypto.c" />
+    <ClCompile Include="mongoc\mongoc-cursor-array.c" />
+    <ClCompile Include="mongoc\mongoc-cursor-change-stream.c" />
+    <ClCompile Include="mongoc\mongoc-cursor-cmd-deprecated.c" />
+    <ClCompile Include="mongoc\mongoc-cursor-cmd.c" />
+    <ClCompile Include="mongoc\mongoc-cursor-find-cmd.c" />
+    <ClCompile Include="mongoc\mongoc-cursor-find-opquery.c" />
+    <ClCompile Include="mongoc\mongoc-cursor-find.c" />
+    <ClCompile Include="mongoc\mongoc-cursor-legacy.c" />
+    <ClCompile Include="mongoc\mongoc-cursor.c" />
+    <ClCompile Include="mongoc\mongoc-cyrus.c" />
+    <ClCompile Include="mongoc\mongoc-database.c" />
+    <ClCompile Include="mongoc\mongoc-error.c" />
+    <ClCompile Include="mongoc\mongoc-find-and-modify.c" />
+    <ClCompile Include="mongoc\mongoc-gridfs-bucket-file.c" />
+    <ClCompile Include="mongoc\mongoc-gridfs-bucket.c" />
+    <ClCompile Include="mongoc\mongoc-gridfs-file-list.c" />
+    <ClCompile Include="mongoc\mongoc-gridfs-file-page.c" />
+    <ClCompile Include="mongoc\mongoc-gridfs-file.c" />
+    <ClCompile Include="mongoc\mongoc-gridfs.c" />
+    <ClCompile Include="mongoc\mongoc-handshake.c" />
+    <ClCompile Include="mongoc\mongoc-host-list.c" />
+    <ClCompile Include="mongoc\mongoc-http.c" />
+    <ClCompile Include="mongoc\mongoc-index.c" />
+    <ClCompile Include="mongoc\mongoc-init.c" />
+    <ClCompile Include="mongoc\mongoc-interrupt.c" />
+    <ClCompile Include="mongoc\mongoc-libressl.c" />
+    <ClCompile Include="mongoc\mongoc-linux-distro-scanner.c" />
+    <ClCompile Include="mongoc\mongoc-list.c" />
+    <ClCompile Include="mongoc\mongoc-log.c" />
+    <ClCompile Include="mongoc\mongoc-matcher-op.c" />
+    <ClCompile Include="mongoc\mongoc-matcher.c" />
+    <ClCompile Include="mongoc\mongoc-memcmp.c" />
+    <ClCompile Include="mongoc\mongoc-ocsp-cache.c" />
+    <ClCompile Include="mongoc\mongoc-openssl.c" />
+    <ClCompile Include="mongoc\mongoc-opts-helpers.c" />
+    <ClCompile Include="mongoc\mongoc-opts.c" />
+    <ClCompile Include="mongoc\mongoc-queue.c" />
+    <ClCompile Include="mongoc\mongoc-rand-cng.c" />
+    <ClCompile Include="mongoc\mongoc-rand-common-crypto.c" />
+    <ClCompile Include="mongoc\mongoc-rand-openssl.c" />
+    <ClCompile Include="mongoc\mongoc-read-concern.c" />
+    <ClCompile Include="mongoc\mongoc-read-prefs.c" />
+    <ClCompile Include="mongoc\mongoc-rpc.c" />
+    <ClCompile Include="mongoc\mongoc-sasl.c" />
+    <ClCompile Include="mongoc\mongoc-scram.c" />
+    <ClCompile Include="mongoc\mongoc-secure-channel.c" />
+    <ClCompile Include="mongoc\mongoc-secure-transport.c" />
+    <ClCompile Include="mongoc\mongoc-server-description.c" />
+    <ClCompile Include="mongoc\mongoc-server-monitor.c" />
+    <ClCompile Include="mongoc\mongoc-server-stream.c" />
+    <ClCompile Include="mongoc\mongoc-set.c" />
+    <ClCompile Include="mongoc\mongoc-socket.c" />
+    <ClCompile Include="mongoc\mongoc-ssl.c" />
+    <ClCompile Include="mongoc\mongoc-sspi.c" />
+    <ClCompile Include="mongoc\mongoc-stream-buffered.c" />
+    <ClCompile Include="mongoc\mongoc-stream-file.c" />
+    <ClCompile Include="mongoc\mongoc-stream-gridfs-download.c" />
+    <ClCompile Include="mongoc\mongoc-stream-gridfs-upload.c" />
+    <ClCompile Include="mongoc\mongoc-stream-gridfs.c" />
+    <ClCompile Include="mongoc\mongoc-stream-socket.c" />
+    <ClCompile Include="mongoc\mongoc-stream-tls-libressl.c" />
+    <ClCompile Include="mongoc\mongoc-stream-tls-openssl-bio.c" />
+    <ClCompile Include="mongoc\mongoc-stream-tls-openssl.c" />
+    <ClCompile Include="mongoc\mongoc-stream-tls-secure-channel.c" />
+    <ClCompile Include="mongoc\mongoc-stream-tls-secure-transport.c" />
+    <ClCompile Include="mongoc\mongoc-stream-tls.c" />
+    <ClCompile Include="mongoc\mongoc-stream.c" />
+    <ClCompile Include="mongoc\mongoc-topology-background-monitoring.c" />
+    <ClCompile Include="mongoc\mongoc-topology-description-apm.c" />
+    <ClCompile Include="mongoc\mongoc-topology-description.c" />
+    <ClCompile Include="mongoc\mongoc-topology-scanner.c" />
+    <ClCompile Include="mongoc\mongoc-topology.c" />
+    <ClCompile Include="mongoc\mongoc-uri.c" />
+    <ClCompile Include="mongoc\mongoc-util.c" />
+    <ClCompile Include="mongoc\mongoc-version-functions.c" />
+    <ClCompile Include="mongoc\mongoc-write-command-legacy.c" />
+    <ClCompile Include="mongoc\mongoc-write-command.c" />
+    <ClCompile Include="mongoc\mongoc-write-concern.c" />
+    <ClCompile Include="tools\mongoc-stat.c" />
+    <ClCompile Include="zlib\adler32.c" />
+    <ClCompile Include="zlib\compress.c" />
+    <ClCompile Include="zlib\crc32.c" />
+    <ClCompile Include="zlib\deflate.c" />
+    <ClCompile Include="zlib\gzclose.c" />
+    <ClCompile Include="zlib\gzlib.c" />
+    <ClCompile Include="zlib\gzread.c" />
+    <ClCompile Include="zlib\gzwrite.c" />
+    <ClCompile Include="zlib\infback.c" />
+    <ClCompile Include="zlib\inffast.c" />
+    <ClCompile Include="zlib\inflate.c" />
+    <ClCompile Include="zlib\inftrees.c" />
+    <ClCompile Include="zlib\trees.c" />
+    <ClCompile Include="zlib\uncompr.c" />
+    <ClCompile Include="zlib\zutil.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bson\bson\bson-config.h.in" />
+    <None Include="bson\bson\bson-version.h.in" />
+    <None Include="mongoc\mongoc-config.h.in" />
+    <None Include="mongoc\mongoc-counters.defs" />
+    <None Include="mongoc\mongoc-version.h.in" />
+    <None Include="zlib\zconf.h.in" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

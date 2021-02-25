@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RetroServer", "RetroServer\RetroServer.vcxproj", "{8014445B-DBA9-487B-A574-6FDC6D5643AC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libevent", "libevent\libevent.vcxproj", "{DD29BA66-E5FB-4A46-B068-047282D31E64}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmongo", "libmongo\libmongo.vcxproj", "{EE3F164C-15AE-45F2-80AE-C46138C437CB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "liblua", "liblua\liblua.vcxproj", "{72729901-258C-454C-949F-7E2D56806CFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8014445B-DBA9-487B-A574-6FDC6D5643AC}.Debug|x64.ActiveCfg = Debug|x64
+		{8014445B-DBA9-487B-A574-6FDC6D5643AC}.Debug|x64.Build.0 = Debug|x64
+		{8014445B-DBA9-487B-A574-6FDC6D5643AC}.Debug|x86.ActiveCfg = Debug|Win32
+		{8014445B-DBA9-487B-A574-6FDC6D5643AC}.Debug|x86.Build.0 = Debug|Win32
+		{8014445B-DBA9-487B-A574-6FDC6D5643AC}.Release|x64.ActiveCfg = Release|x64
+		{8014445B-DBA9-487B-A574-6FDC6D5643AC}.Release|x64.Build.0 = Release|x64
+		{8014445B-DBA9-487B-A574-6FDC6D5643AC}.Release|x86.ActiveCfg = Release|Win32
+		{8014445B-DBA9-487B-A574-6FDC6D5643AC}.Release|x86.Build.0 = Release|Win32
+		{DD29BA66-E5FB-4A46-B068-047282D31E64}.Debug|x64.ActiveCfg = Debug|x64
+		{DD29BA66-E5FB-4A46-B068-047282D31E64}.Debug|x64.Build.0 = Debug|x64
+		{DD29BA66-E5FB-4A46-B068-047282D31E64}.Debug|x86.ActiveCfg = Debug|Win32
+		{DD29BA66-E5FB-4A46-B068-047282D31E64}.Debug|x86.Build.0 = Debug|Win32
+		{DD29BA66-E5FB-4A46-B068-047282D31E64}.Release|x64.ActiveCfg = Release|x64
+		{DD29BA66-E5FB-4A46-B068-047282D31E64}.Release|x64.Build.0 = Release|x64
+		{DD29BA66-E5FB-4A46-B068-047282D31E64}.Release|x86.ActiveCfg = Release|Win32
+		{DD29BA66-E5FB-4A46-B068-047282D31E64}.Release|x86.Build.0 = Release|Win32
+		{EE3F164C-15AE-45F2-80AE-C46138C437CB}.Debug|x64.ActiveCfg = Debug|x64
+		{EE3F164C-15AE-45F2-80AE-C46138C437CB}.Debug|x64.Build.0 = Debug|x64
+		{EE3F164C-15AE-45F2-80AE-C46138C437CB}.Debug|x86.ActiveCfg = Debug|Win32
+		{EE3F164C-15AE-45F2-80AE-C46138C437CB}.Debug|x86.Build.0 = Debug|Win32
+		{EE3F164C-15AE-45F2-80AE-C46138C437CB}.Release|x64.ActiveCfg = Release|x64
+		{EE3F164C-15AE-45F2-80AE-C46138C437CB}.Release|x64.Build.0 = Release|x64
+		{EE3F164C-15AE-45F2-80AE-C46138C437CB}.Release|x86.ActiveCfg = Release|Win32
+		{EE3F164C-15AE-45F2-80AE-C46138C437CB}.Release|x86.Build.0 = Release|Win32
+		{72729901-258C-454C-949F-7E2D56806CFA}.Debug|x64.ActiveCfg = Debug|x64
+		{72729901-258C-454C-949F-7E2D56806CFA}.Debug|x64.Build.0 = Debug|x64
+		{72729901-258C-454C-949F-7E2D56806CFA}.Debug|x86.ActiveCfg = Debug|Win32
+		{72729901-258C-454C-949F-7E2D56806CFA}.Debug|x86.Build.0 = Debug|Win32
+		{72729901-258C-454C-949F-7E2D56806CFA}.Release|x64.ActiveCfg = Release|x64
+		{72729901-258C-454C-949F-7E2D56806CFA}.Release|x64.Build.0 = Release|x64
+		{72729901-258C-454C-949F-7E2D56806CFA}.Release|x86.ActiveCfg = Release|Win32
+		{72729901-258C-454C-949F-7E2D56806CFA}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE19D94A-F620-47BA-8707-1E950B8119BD}
+	EndGlobalSection
+EndGlobal

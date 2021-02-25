@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="src\db">
+      <UniqueIdentifier>{f911d0d0-2522-414a-ba06-624456bd5e5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\base">
+      <UniqueIdentifier>{174beebc-a354-4867-b7a3-6980d741f074}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\config">
+      <UniqueIdentifier>{4bf3023f-8776-4a5c-86d4-3660e22e4c26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\luaext">
+      <UniqueIdentifier>{1bf3f094-f7e2-44a5-9cfc-cf4975dc5b6f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\db\MongoManager.cpp">
+      <Filter>src\db</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TimeUtils.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LogUtils.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\db\MongoDB.cpp">
+      <Filter>src\db</Filter>
+    </ClCompile>
+    <ClCompile Include="src\db\DBCollection.cpp">
+      <Filter>src\db</Filter>
+    </ClCompile>
+    <ClCompile Include="src\db\BsonObj.cpp">
+      <Filter>src\db</Filter>
+    </ClCompile>
+    <ClCompile Include="src\db\DBCommand.cpp">
+      <Filter>src\db</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\Ref.cpp">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\Runner.cpp">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base\Timer.cpp">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\config\config.cpp">
+      <Filter>src\config</Filter>
+    </ClCompile>
+    <ClCompile Include="src\luaext\FileSystem.cpp">
+      <Filter>src\luaext</Filter>
+    </ClCompile>
+    <ClCompile Include="src\luaext\GameLua.cpp">
+      <Filter>src\luaext</Filter>
+    </ClCompile>
+    <ClCompile Include="src\config\TestConfig.cpp">
+      <Filter>src\config</Filter>
+    </ClCompile>
+    <ClCompile Include="src\config\PlayerConfig.cpp">
+      <Filter>src\config</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\db\MongoManager.h">
+      <Filter>src\db</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TimeUtils.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LogUtils.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\db\MongoDB.h">
+      <Filter>src\db</Filter>
+    </ClInclude>
+    <ClInclude Include="src\db\DBCollection.h">
+      <Filter>src\db</Filter>
+    </ClInclude>
+    <ClInclude Include="src\db\BsonObj.h">
+      <Filter>src\db</Filter>
+    </ClInclude>
+    <ClInclude Include="src\db\DBCommand.h">
+      <Filter>src\db</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\Ref.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\Runner.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\HashList.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base\Timer.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\config\config.h">
+      <Filter>src\config</Filter>
+    </ClInclude>
+    <ClInclude Include="src\luaext\FileSystem.h">
+      <Filter>src\luaext</Filter>
+    </ClInclude>
+    <ClInclude Include="src\luaext\LuaWrapper.h">
+      <Filter>src\luaext</Filter>
+    </ClInclude>
+    <ClInclude Include="src\luaext\GameLua.h">
+      <Filter>src\luaext</Filter>
+    </ClInclude>
+    <ClInclude Include="src\config\TestConfig.h">
+      <Filter>src\config</Filter>
+    </ClInclude>
+    <ClInclude Include="src\config\PlayerConfig.h">
+      <Filter>src\config</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
